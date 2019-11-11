@@ -16,7 +16,7 @@ user=$(stat -f%Su /dev/console)
 
 echo -e "\t "
 echo -e "\t stop the service"
-/bin/launchctl unload /Users/${user}/Library/LaunchAgents/homebrew.mxcl.mosquitto.plist
+sudo -u ${user} /bin/launchctl unload /usr/local/opt/mosquitto-1.6.7/homebrew.mxcl.mosquitto.plist
 
 echo -e "\t removing the working folder"
 /bin/rm -rf /usr/local/var/mosquitto
@@ -29,9 +29,6 @@ echo -e "\t removing the mosquitto binaries symlinks"
 /bin/rm -f /usr/local/bin/mosquitto_pub
 /bin/rm -f /usr/local/bin/mosquitto_rr
 /bin/rm -f /usr/local/bin/mosquitto_sub
-
-echo -e "\t removing the service file"
-/bin/rm -f /Users/${user}/Library/LaunchAgents/homebrew.mxcl.mosquitto.plist
 
 echo -e "\t removing the mostquitto binary and the symlink"
 /bin/rm -f /usr/local/opt/mosquitto

@@ -70,7 +70,6 @@ EOF
 # there may be single files
 pkgFiles=$(cat <<EOF
 uninstall-mosquitto.sh=/usr/local/bin/uninstall-mosquitto.sh
-start-mosquitto.sh=/usr/local/bin/start-mosquitto.sh
 EOF
 )
 
