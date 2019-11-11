@@ -1,0 +1,8 @@
+{
+  "name": "mosquitto-binary-mac",
+  "version": "1.6.7",
+  "description": "A script that uses Homebrew and Fpm on your Mac to build a Mosquitto Binary Installer.  This package uses the version number of the Mosquitto package as it was when I created this project.",
+  "author": "Allen Joslin",
+  "email": "allen.joslin@gmail.com",
+  "license": "MIT"
+}
